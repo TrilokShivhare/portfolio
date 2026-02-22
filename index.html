@@ -1,0 +1,837 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description"
+        content="Trilok Shivhare – Mobile App Developer with 2.5+ years of experience building high-performance Android & iOS apps. Specializing in Flutter, Swift, Clean Architecture, and REST APIs." />
+    <meta name="keywords"
+        content="Mobile App Developer, Flutter Developer, Swift Developer, Android Developer, iOS Developer, Firebase Developer, Clean Architecture, GetX, Riverpod, Dart, Trilok Shivhare, Indore" />
+    <meta name="author" content="Trilok Shivhare" />
+    <meta property="og:title" content="Trilok Shivhare | Mobile App Developer & Specialist" />
+    <meta property="og:description"
+        content="Building scalable & production-ready mobile apps with Flutter & Swift. 5+ live apps. Team Lead at Developer Bazaar." />
+    <meta property="og:type" content="website" />
+    <title>Trilok Shivhare | Mobile App Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Fira+Code:wght@400;500&display=swap"
+        rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+    <!-- ===== NAVIGATION ===== -->
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-bracket">&lt;</span>TS<span class="logo-bracket">/&gt;</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><a href="resume.pdf" class="nav-cta" id="navResumeBtn" download>Resume</a></li>
+            </ul>
+            <button class="hamburger" id="hamburger" aria-label="Toggle menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ===== HERO SECTION ===== -->
+    <section class="hero" id="hero">
+        <div class="hero-bg-grid"></div>
+        <div class="hero-orb hero-orb-1"></div>
+        <div class="hero-orb hero-orb-2"></div>
+        <div class="hero-orb hero-orb-3"></div>
+        <div class="hero-particles" id="heroParticles"></div>
+
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Available for Opportunities
+                </div>
+                <h1 class="hero-title">
+                    Building <span class="gradient-text">Scalable</span> &<br />
+                    <span class="gradient-text">Production-Ready</span><br />
+                    Mobile Apps
+                </h1>
+                <p class="hero-subtitle">
+                    <strong>Mobile App Developer</strong> with <strong>2.5+ years</strong> of experience delivering
+                    high-performance
+                    Android & iOS apps used by thousands of users.
+                </p>
+                <div class="hero-meta">
+                    <span class="hero-meta-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                            <circle cx="12" cy="10" r="3" />
+                        </svg>
+                        Indore, India
+                    </span>
+                    <span class="hero-meta-item">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <rect x="2" y="7" width="20" height="14" rx="2" />
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16" />
+                        </svg>
+                        Mobile App Developer · Team Lead
+                    </span>
+                </div>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary" id="heroViewWork">
+                        <span>View My Work</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </a>
+                    <a href="resume.pdf" class="btn btn-outline" id="heroDownloadResume" download>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4" />
+                            <polyline points="7 10 12 15 17 10" />
+                            <line x1="12" y1="15" x2="12" y2="3" />
+                        </svg>
+                        <span>Download Resume</span>
+                    </a>
+                </div>
+                <div class="hero-socials">
+                    <a href="https://www.linkedin.com/in/trilok-shivhare-7825721aa/?originalSubdomain=in"
+                        target="_blank" rel="noopener" class="social-link" id="heroLinkedIn" aria-label="LinkedIn">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                    <a href="mailto:trilokshivhare9@gmail.com" class="social-link" id="heroEmail" aria-label="Email">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                    </a>
+                    <a href="tel:+917747032315" class="social-link" id="heroPhone" aria-label="Phone">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+
+            <div class="hero-visual">
+                <div class="phone-mockup">
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-screen">
+                            <div class="app-ui">
+                                <div class="app-header">
+                                    <div class="app-avatar"></div>
+                                    <div class="app-header-text">
+                                        <div class="app-bar"></div>
+                                        <div class="app-bar app-bar-sm"></div>
+                                    </div>
+                                </div>
+                                <div class="app-card app-card-main">
+                                    <div class="app-chart">
+                                        <div class="chart-bar" style="--h:60%"></div>
+                                        <div class="chart-bar" style="--h:80%"></div>
+                                        <div class="chart-bar" style="--h:45%"></div>
+                                        <div class="chart-bar" style="--h:90%"></div>
+                                        <div class="chart-bar" style="--h:70%"></div>
+                                        <div class="chart-bar" style="--h:55%"></div>
+                                    </div>
+                                </div>
+                                <div class="app-row">
+                                    <div class="app-card app-card-sm"></div>
+                                    <div class="app-card app-card-sm app-card-accent"></div>
+                                </div>
+                                <div class="app-list">
+                                    <div class="app-list-item"></div>
+                                    <div class="app-list-item"></div>
+                                    <div class="app-list-item"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="phone-glow"></div>
+                </div>
+
+                <div class="floating-badge badge-flutter">
+                    <img src="https://storage.googleapis.com/cms-storage-bucket/6a07d8a62f4308d2b854.svg" alt="Flutter"
+                        width="22" height="22"
+                        onerror="this.style.display='none';this.nextElementSibling.style.display='inline'" />
+                    <span style="display:none">🐦</span>
+                    Flutter
+                </div>
+                <div class="floating-badge badge-firebase">
+                    🔥 Firebase
+                </div>
+                <div class="floating-badge badge-live">
+                    <span class="pulse-dot"></span> 5+ Live Apps
+                </div>
+            </div>
+        </div>
+
+        <div class="hero-scroll-hint">
+            <div class="scroll-mouse">
+                <div class="scroll-wheel"></div>
+            </div>
+            <span>Scroll to explore</span>
+        </div>
+    </section>
+
+    <!-- ===== ABOUT SECTION ===== -->
+    <section class="section about-section" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Who I Am</span>
+                <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+            </div>
+            <div class="about-grid">
+                <div class="about-visual">
+                    <div class="about-image-container">
+                        <img src="profile_full.jpg" alt="Trilok Shivhare" class="profile-large-image">
+                    </div>
+                </div>
+                <div class="about-content">
+                    <p class="about-intro">
+                        I'm <strong class="gradient-text">Trilok Shivhare</strong>, a passionate <strong>Mobile App
+                            Developer</strong> based in Indore, India, with <strong>2.5+ years</strong> of hands-on
+                        experience building production-grade mobile applications for both Android and iOS platforms.
+                    </p>
+
+                    <div class="about-stats">
+                        <div class="stat-card">
+                            <span class="stat-num">2.5+</span>
+                            <span class="stat-label">Years Exp.</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">5+</span>
+                            <span class="stat-label">Live Apps</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">2</span>
+                            <span class="stat-label">Platforms</span>
+                        </div>
+                        <div class="stat-card">
+                            <span class="stat-num">4</span>
+                            <span class="stat-label">Devs Led</span>
+                        </div>
+                    </div>
+                    <p class="about-text">
+                        Currently serving as a <strong>Mobile App Developer & Team Lead at Developer Bazaar</strong>, I
+                        lead a team of 4 developers and have successfully delivered <strong>5+ apps</strong> now live on
+                        the App Store and Play Store. I'm deeply invested in writing clean, maintainable code following
+                        <strong>MVVM Clean Architecture</strong> principles.
+                    </p>
+                    <p class="about-text">
+                        My expertise spans state management solutions like <strong>GetX</strong> and
+                        <strong>Riverpod</strong>, backend integration with <strong>Firebase</strong> (Auth, Firestore,
+                        Cloud Messaging) and <strong>REST APIs</strong>, CI/CD pipelines, and full deployment workflows
+                        on both <strong>App Store Connect</strong> and <strong>Play Console</strong>.
+                    </p>
+                    <div class="about-highlights">
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🏗️</span>
+                            <span>Clean Architecture & MVVM</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">🚀</span>
+                            <span>App Store & Play Store Deployments</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">👥</span>
+                            <span>Team Leadership & Mentorship</span>
+                        </div>
+                        <div class="highlight-item">
+                            <span class="highlight-icon">⚡</span>
+                            <span>Performance Optimization</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== SKILLS SECTION ===== -->
+    <section class="section skills-section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">What I Know</span>
+                <h2 class="section-title">Technical <span class="gradient-text">Skills</span></h2>
+            </div>
+            <div class="skills-grid">
+
+                <div class="skill-category" data-category="languages">
+                    <div class="skill-category-header">
+                        <span class="skill-cat-icon">💻</span>
+                        <h3>Languages</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag skill-tag-primary">Dart</span>
+                        <span class="skill-tag skill-tag-primary">Swift</span>
+                        <span class="skill-tag">Java</span>
+                        <span class="skill-tag">C++</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-category="framework">
+                    <div class="skill-category-header">
+                        <span class="skill-cat-icon">🐦</span>
+                        <h3>Framework</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag skill-tag-primary">Flutter</span>
+                    </div>
+                    <div class="skill-proficiency">
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="--width: 95%"></div>
+                        </div>
+                        <span>95% Proficiency</span>
+                    </div>
+                </div>
+
+                <div class="skill-category" data-category="state">
+                    <div class="skill-category-header">
+                        <span class="skill-cat-icon">⚡</span>
+                        <h3>State Management</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag skill-tag-primary">GetX</span>
+                        <span class="skill-tag skill-tag-primary">Riverpod</span>
+                    </div>
+                </div>
+
+                <div class="skill-category skill-category-wide" data-category="backend">
+                    <div class="skill-category-header">
+                        <span class="skill-cat-icon">🔧</span>
+                        <h3>Backend & Tools</h3>
+                    </div>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Firebase Auth</span>
+                        <span class="skill-tag">Firestore</span>
+                        <span class="skill-tag">Cloud Messaging</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">Postman</span>
+                        <span class="skill-tag">Git & GitHub</span>
+                        <span class="skill-tag">App Store Connect</span>
+                        <span class="skill-tag">Play Console</span>
+                        <span class="skill-tag">GitHub Actions</span>
+                        <span class="skill-tag">Firebase Crashlytics</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EXPERIENCE SECTION ===== -->
+    <section class="section experience-section" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Career Path</span>
+                <h2 class="section-title">Professional <span class="gradient-text">Experience</span></h2>
+            </div>
+            <div class="timeline">
+
+                <div class="timeline-item timeline-item-left">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div class="timeline-company-info">
+                                <div class="company-icon">DB</div>
+                                <div>
+                                    <h3 class="timeline-role">Mobile App Developer & Team Lead</h3>
+                                    <span class="timeline-company">Developer Bazaar</span>
+                                </div>
+                            </div>
+                            <span class="timeline-period">Mar 2024 – Present</span>
+                        </div>
+                        <span class="timeline-badge timeline-badge-current">Current</span>
+                        <ul class="timeline-points">
+                            <li>Led a team of <strong>4 Flutter developers</strong>, conducting code reviews and
+                                mentoring junior developers</li>
+                            <li>Delivered <strong>5+ production apps</strong> now live on App Store and Play Store
+                                serving thousands of users</li>
+                            <li>Managed <strong>CI/CD pipelines</strong> and full release lifecycle including App Store
+                                & Play Console deployments</li>
+                            <li>Improved app performance, crash rates, and overall stability via <strong>Firebase
+                                    Crashlytics</strong></li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="timeline-item timeline-item-right">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-card">
+                        <div class="timeline-header">
+                            <div class="timeline-company-info">
+                                <div class="company-icon company-icon-alt">KI</div>
+                                <div>
+                                    <h3 class="timeline-role">Mobile App Developer</h3>
+                                    <span class="timeline-company">Kartgen Infotech LLP</span>
+                                </div>
+                            </div>
+                            <span class="timeline-period">Aug 2023 – Feb 2024</span>
+                        </div>
+                        <ul class="timeline-points">
+                            <li>Built feature-rich <strong>e-commerce apps</strong> integrated with WordPress REST APIs
+                            </li>
+                            <li>Developed interactive <strong>e-learning applications</strong> with rich media and
+                                progress tracking</li>
+                            <li>Delivered pixel-perfect UI implementations from <strong>Figma</strong> designs with high
+                                fidelity</li>
+                        </ul>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== PROJECTS SECTION ===== -->
+    <section class="section projects-section" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">My Work</span>
+                <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+                <p class="section-subtitle">5+ production apps live on App Store & Play Store</p>
+            </div>
+            <div class="projects-grid">
+
+                <!-- Project 1: Trimify -->
+                <div class="project-card" id="projectTrimify">
+                    <div class="project-glow"></div>
+                    <div class="project-top">
+                        <div class="project-icon project-icon-1">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path
+                                    d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78z" />
+                            </svg>
+                        </div>
+                        <span class="project-platform ios-badge">iOS</span>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Trimify</h3>
+                        <p class="project-category">Health & Fitness App</p>
+                        <p class="project-desc">A comprehensive health and fitness application helping users track
+                            workouts, nutrition, and wellness goals with an intuitive and engaging interface.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Flutter</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">Health APIs</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://apps.apple.com/in/app/trimify/id6738946874" target="_blank" rel="noopener"
+                            class="btn-project btn-appstore" id="trimifyAppStore">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                            </svg>
+                            App Store
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Jayhyzmat -->
+                <div class="project-card" id="projectJayhyzmat">
+                    <div class="project-glow"></div>
+                    <div class="project-top">
+                        <div class="project-icon project-icon-2">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+                                <line x1="3" y1="6" x2="21" y2="6" />
+                                <path d="M16 10a4 4 0 0 1-8 0" />
+                            </svg>
+                        </div>
+                        <span class="project-platform ios-badge">iOS</span>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Jayhyzmat</h3>
+                        <p class="project-category">E-commerce App</p>
+                        <p class="project-desc">A full-featured e-commerce platform providing seamless shopping
+                            experience with product discovery, cart management, and secure checkout flows.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Flutter</span>
+                            <span class="project-tag">REST APIs</span>
+                            <span class="project-tag">Payment</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://apps.apple.com/in/app/jayhyzmat/id6743439907" target="_blank" rel="noopener"
+                            class="btn-project btn-appstore" id="jayhyzmatAppStore">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                            </svg>
+                            App Store
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Ability Amore -->
+                <div class="project-card" id="projectAbilityAmore">
+                    <div class="project-glow"></div>
+                    <div class="project-top">
+                        <div class="project-icon project-icon-3">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <span class="project-platform ios-badge">iOS</span>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">Ability Amore</h3>
+                        <p class="project-category">Social Networking & Chat App</p>
+                        <p class="project-desc">An inclusive social networking platform with real-time chat capabilities
+                            connecting users, fostering community engagement and meaningful conversations.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Flutter</span>
+                            <span class="project-tag">Firebase</span>
+                            <span class="project-tag">Real-time Chat</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://apps.apple.com/in/app/ability-amore/id6748636532" target="_blank"
+                            rel="noopener" class="btn-project btn-appstore" id="abilityAmoreAppStore">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z" />
+                            </svg>
+                            App Store
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4: EasyPayClockIn -->
+                <div class="project-card" id="projectEasyPay">
+                    <div class="project-glow"></div>
+                    <div class="project-top">
+                        <div class="project-icon project-icon-4">
+                            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="1.5">
+                                <rect x="3" y="4" width="18" height="18" rx="2" ry="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                        </div>
+                        <span class="project-platform android-badge">Android</span>
+                    </div>
+                    <div class="project-body">
+                        <h3 class="project-title">EasyPayClockIn</h3>
+                        <p class="project-category">Attendance Management System</p>
+                        <p class="project-desc">A robust attendance and time management system for businesses,
+                            streamlining employee clock-in/out, payroll integration, and workforce analytics.</p>
+                        <div class="project-tags">
+                            <span class="project-tag">Flutter</span>
+                            <span class="project-tag">Attendance</span>
+                            <span class="project-tag">HR Tech</span>
+                        </div>
+                    </div>
+                    <div class="project-actions">
+                        <a href="https://play.google.com/store/apps/details?id=come.easy_pay_clock_in.easy_pay_clock_in"
+                            target="_blank" rel="noopener" class="btn-project btn-playstore" id="easyPayPlayStore">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                                <path
+                                    d="M3 20.5v-17c0-.83 1.01-1.3 1.67-.77l14 8.5c.59.36.59 1.18 0 1.54l-14 8.5C4.01 21.8 3 21.33 3 20.5z" />
+                            </svg>
+                            Play Store
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== LINKEDIN POSTS SECTION ===== -->
+    <section class="section linkedin-section" id="linkedin">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Social Presence</span>
+                <h2 class="section-title">Latest <span class="gradient-text">LinkedIn</span> Posts</h2>
+                <p class="section-subtitle">Stay updated with my latest professional insights and project highlights</p>
+            </div>
+            <div class="linkedin-grid" id="linkedinGrid">
+                <!-- LinkedIn cards are dynamically rendered via script.js -->
+                <div class="loading-spinner">Loading latest posts...</div>
+            </div>
+            <div class="linkedin-cta">
+                <a href="https://www.linkedin.com/in/trilok-shivhare-7825721aa/?originalSubdomain=in" target="_blank"
+                    class="btn btn-outline" id="linkedinFollowBtn">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                        <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                        <rect x="2" y="9" width="4" height="12" />
+                        <circle cx="4" cy="4" r="2" />
+                    </svg>
+                    Follow me on LinkedIn
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== ACHIEVEMENTS SECTION ===== -->
+    <section class="section achievements-section" id="achievements">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Recognition</span>
+                <h2 class="section-title">Achievements & <span class="gradient-text">Awards</span></h2>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card" id="achieveStar">
+                    <div class="achievement-icon">⭐</div>
+                    <div class="achievement-body">
+                        <h3>Star Performer of the Year</h3>
+                        <p>Awarded by <strong>Developer Bazaar</strong> for exceptional performance, leadership, and
+                            delivery of multiple production-grade applications.</p>
+                    </div>
+                    <div class="achievement-ribbon">Award</div>
+                </div>
+                <div class="achievement-card" id="achieveWinner">
+                    <div class="achievement-icon">🏆</div>
+                    <div class="achievement-body">
+                        <h3>Winner – Extension Master Competition</h3>
+                        <p>First-place recognition for outstanding performance and excellence in a competitive
+                            programming and development challenge.</p>
+                    </div>
+                    <div class="achievement-ribbon">Winner</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== EDUCATION SECTION ===== -->
+    <section class="section education-section" id="education">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Academic Background</span>
+                <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+            </div>
+            <div class="education-card" id="educationCard">
+                <div class="education-icon">🎓</div>
+                <div class="education-body">
+                    <h3>B.Tech in Computer Science</h3>
+                    <span class="education-institution">Acropolis Institute of Technology and Research</span>
+                    <div class="education-meta">
+                        <span class="edu-meta-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <rect x="3" y="4" width="18" height="18" rx="2" />
+                                <line x1="16" y1="2" x2="16" y2="6" />
+                                <line x1="8" y1="2" x2="8" y2="6" />
+                                <line x1="3" y1="10" x2="21" y2="10" />
+                            </svg>
+                            2019 – 2023
+                        </span>
+                        <span class="edu-meta-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <polyline points="22 12 18 12 15 21 9 3 6 12 2 12" />
+                            </svg>
+                            CGPA: 7.5 / 10
+                        </span>
+                        <span class="edu-meta-item">
+                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z" />
+                                <circle cx="12" cy="10" r="3" />
+                            </svg>
+                            Indore, India
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CTA SECTION ===== -->
+    <section class="section cta-section" id="cta">
+        <div class="cta-bg-orb cta-orb-1"></div>
+        <div class="cta-bg-orb cta-orb-2"></div>
+        <div class="container">
+            <div class="cta-content">
+                <h2 class="cta-title">Let's Build <span class="gradient-text">High-Performance</span><br /> Mobile
+                    Solutions Together</h2>
+                <p class="cta-subtitle">Have a project in mind? Let's connect and turn your idea into a polished,
+                    production-ready app.</p>
+                <div class="cta-actions">
+                    <a href="#contact" class="btn btn-primary" id="ctaContact">
+                        <span>Contact Me</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                    </a>
+                    <a href="https://www.linkedin.com/in/trilok-shivhare-7825721aa" target="_blank" rel="noopener"
+                        class="btn btn-outline" id="ctaHire">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                        <span>Hire Me on LinkedIn</span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== CONTACT SECTION ===== -->
+    <section class="section contact-section" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Get In Touch</span>
+                <h2 class="section-title">Let's <span class="gradient-text">Connect</span></h2>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Open to Opportunities</h3>
+                    <p>Whether you're a startup looking for your next Flutter developer or an MNC seeking a skilled
+                        mobile engineer, I'd love to chat!</p>
+                    <div class="contact-links">
+                        <a href="mailto:trilokshivhare9@gmail.com" class="contact-link" id="contactEmail">
+                            <div class="contact-link-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                    <polyline points="22,6 12,13 2,6" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-link-label">Email</span>
+                                <span class="contact-link-value">trilokshivhare9@gmail.com</span>
+                            </div>
+                        </a>
+                        <a href="tel:+917747032315" class="contact-link" id="contactPhone">
+                            <div class="contact-link-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                    stroke-width="2">
+                                    <path
+                                        d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-link-label">Phone</span>
+                                <span class="contact-link-value">+91-7747032315</span>
+                            </div>
+                        </a>
+                        <a href="https://www.linkedin.com/in/trilok-shivhare-7825721aa/?originalSubdomain=in"
+                            target="_blank" rel="noopener" class="contact-link" id="contactLinkedIn">
+                            <div class="contact-link-icon">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                                    <path
+                                        d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                                    <rect x="2" y="9" width="4" height="12" />
+                                    <circle cx="4" cy="4" r="2" />
+                                </svg>
+                            </div>
+                            <div>
+                                <span class="contact-link-label">LinkedIn</span>
+                                <span class="contact-link-value">trilok-shivhare-7825721aa</span>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+
+                <form class="contact-form" id="contactForm" onsubmit="handleFormSubmit(event)">
+                    <div class="form-group">
+                        <label for="formName">Your Name</label>
+                        <input type="text" id="formName" name="name" placeholder="John Doe" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="formEmail">Your Email</label>
+                        <input type="email" id="formEmail" name="email" placeholder="john@company.com" required />
+                    </div>
+                    <div class="form-group">
+                        <label for="formSubject">Subject</label>
+                        <input type="text" id="formSubject" name="subject" placeholder="Flutter Developer Opportunity"
+                            required />
+                    </div>
+                    <div class="form-group">
+                        <label for="formMessage">Message</label>
+                        <textarea id="formMessage" name="message" rows="5"
+                            placeholder="Tell me about your project or opportunity..." required></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-full" id="formSubmitBtn">
+                        <span>Send Message</span>
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <line x1="22" y1="2" x2="11" y2="13" />
+                            <polygon points="22 2 15 22 11 13 2 9 22 2" />
+                        </svg>
+                    </button>
+                    <div class="form-success" id="formSuccess">
+                        ✅ Message sent! I'll get back to you shortly.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-top">
+                <a href="#hero" class="nav-logo footer-logo">
+                    <span class="logo-bracket">&lt;</span>TS<span class="logo-bracket">/&gt;</span>
+                </a>
+                <p class="footer-tagline">Building scalable Flutter apps, one commit at a time.</p>
+                <div class="footer-socials">
+                    <a href="https://www.linkedin.com/in/trilok-shivhare-7825721aa/?originalSubdomain=in"
+                        target="_blank" rel="noopener" aria-label="LinkedIn" class="footer-social-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg>
+                    </a>
+                    <a href="mailto:trilokshivhare9@gmail.com" aria-label="Email" class="footer-social-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg>
+                    </a>
+                    <a href="tel:+917747032315" aria-label="Phone" class="footer-social-link">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2">
+                            <path
+                                d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.4 2 2 0 0 1 3.6 1.22h3a2 2 0 0 1 2 1.72c.127.96.361 1.903.7 2.81a2 2 0 0 1-.45 2.11L7.91 8.77a16 16 0 0 0 6.29 6.29l.95-.95a2 2 0 0 1 2.11-.45c.907.339 1.85.573 2.81.7A2 2 0 0 1 22 16.92z" />
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Trilok Shivhare. All rights reserved.</p>
+                <p>Crafted with ❤️ using HTML, CSS & JavaScript</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
