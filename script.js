@@ -160,7 +160,9 @@ document.addEventListener('DOMContentLoaded', () => {
                     setTimeout(() => successMsg.classList.remove('show'), 5000);
                 } else {
                     const data = await response.json();
-                    alert(data.errors ? data.errors.map(error => error.message).join(", ") : "Oops! There was a problem submitting your form");
+                    const errorMsg = data.errors ? data.errors.map(error => error.message).join(", ") : "Oops! There was a problem submitting your form. Please ensure the Formspree ID is correct.";
+                    alert(errorMsg);
+                    console.error("Formspree Error:", data);
                 }
             } catch (error) {
                 alert("Oops! There was a problem submitting your form");
