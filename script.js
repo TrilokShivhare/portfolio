@@ -134,23 +134,42 @@ document.addEventListener('DOMContentLoaded', () => {
     }, { threshold: 0.5 });
     statNums.forEach(el => statObserver.observe(el));
 
-    // ---- Contact form handler ----
-    window.handleFormSubmit = function (e) {
-        e.preventDefault();
-        const btn = document.getElementById('formSubmitBtn');
-        const successMsg = document.getElementById('formSuccess');
-        btn.disabled = true;
-        btn.querySelector('span').textContent = 'Sending…';
+    // ---- Contact form handler (Formspree) ----
+    const contactForm = document.getElementById('contactForm');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async (e) => {
+            e.preventDefault();
+            const btn = document.getElementById('formSubmitBtn');
+            const successMsg = document.getElementById('formSuccess');
+            const formData = new FormData(contactForm);
 
-        // Simulate sending (replace with real backend/Formspree if needed)
-        setTimeout(() => {
-            btn.querySelector('span').textContent = 'Send Message';
-            btn.disabled = false;
-            successMsg.classList.add('show');
-            e.target.reset();
-            setTimeout(() => successMsg.classList.remove('show'), 5000);
-        }, 1200);
-    };
+            btn.disabled = true;
+            btn.querySelector('span').textContent = 'Sending…';
+
+            try {
+                const response = await fetch(contactForm.getAttribute('action'), {
+                    method: 'POST',
+                    body: formData,
+                    headers: { 'Accept': 'application/json' }
+                });
+
+                if (response.ok) {
+                    successMsg.classList.add('show');
+                    contactForm.reset();
+                    btn.querySelector('span').textContent = 'Send Message';
+                    setTimeout(() => successMsg.classList.remove('show'), 5000);
+                } else {
+                    const data = await response.json();
+                    alert(data.errors ? data.errors.map(error => error.message).join(", ") : "Oops! There was a problem submitting your form");
+                }
+            } catch (error) {
+                alert("Oops! There was a problem submitting your form");
+            } finally {
+                btn.disabled = false;
+                btn.querySelector('span').textContent = 'Send Message';
+            }
+        });
+    }
 
     // ---- Smooth scroll for anchor links ----
     document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -239,7 +258,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     <div class="linkedin-avatar">TS</div>
                     <div class="linkedin-header-text">
                         <h4>Trilok Shivhare</h4>
-                        <span>Mobile App Developer · Team Lead</span>
+                        <span>Mobile App Developer</span>
                     </div>
                 </div>
                 <div class="linkedin-card-body">
