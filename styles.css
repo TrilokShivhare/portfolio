@@ -167,6 +167,13 @@ button {
     cursor: pointer;
     position: relative;
     overflow: hidden;
+    isolation: isolate;
+}
+
+.btn>span,
+.btn>svg {
+    position: relative;
+    z-index: 2;
 }
 
 .btn::before {
@@ -2230,6 +2237,7 @@ button {
     display: -webkit-box;
     -webkit-line-clamp: 3;
     -webkit-box-orient: vertical;
+    line-clamp: 3;
     overflow: hidden;
 }
 
