@@ -196,8 +196,8 @@ document.addEventListener('DOMContentLoaded', () => {
         }, 100);
     }
 
-    // ---- Tilt effect on project cards ----
-    document.querySelectorAll('.project-card').forEach(card => {
+    // ---- Tilt effect on cards ----
+    document.querySelectorAll('.project-card, .blog-card').forEach(card => {
         card.addEventListener('mousemove', (e) => {
             const rect = card.getBoundingClientRect();
             const x = (e.clientX - rect.left) / rect.width - 0.5;
@@ -209,75 +209,239 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // ---- LinkedIn Feed Renderer ----
-    /**
-     * OPTION: MANUAL UPDATE
-     * To update your LinkedIn posts:
-     * 1. Go to the post on LinkedIn.
-     * 2. Copy the Title, a short Excerpt, and the URL.
-     * 3. Paste them into a new object in the array below.
-     * 
-     * NOTE: LinkedIn images expire quickly. If an image stops showing, 
-     * it will fallback to the high-quality tech images below.
-     */
-    const linkedinPosts = [
+    // ---- Blog & Insights Renderer & Modal Logic ----
+    const blogPosts = [
         {
-            title: 'Flutter Widgets for Responsive Design',
-            excerpt: 'Essential widgets for pixel-perfect UIs: Hero, LayoutBuilder, and AnimatedSwitcher. A quick guide on building scalable mobile apps.',
-            image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop', // MacBook coding
-            link: 'https://www.linkedin.com/posts/trilok-shivhare-7825721aa_flutter-flutterdev-mobiledevelopment-activity-7383942849031192578-fwAc',
-            tags: ['#Flutter', '#MobileDev']
+            id: 'ai-journey',
+            title: 'Leveraging AI: My Journey with Antigravity & Cursor',
+            excerpt: 'How AI-powered tools are revolutionizing my development workflow, from rapid prototyping to complex bug fixing and code optimization.',
+            image: 'https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=800&auto=format&fit=crop',
+            link: '#',
+            tags: ['#AI', '#Productivity'],
+            date: 'Feb 15, 2025',
+            content: `
+                <div class="blog-article">
+                    <header class="article-header">
+                        <span class="article-tag">AI-Powered Development</span>
+                        <h1 class="article-title">Leveraging AI: My Journey with Antigravity & Cursor</h1>
+                        <div class="article-meta">
+                            <span>Feb 15, 2025</span>
+                            <span>•</span>
+                            <span>6 min read</span>
+                        </div>
+                    </header>
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop" alt="AI Development">
+                    </div>
+                    <div class="article-content">
+                        <p>In the rapidly evolving world of mobile development, staying ahead means embracing the latest tools. My recent shift towards AI-powered development environments like <strong>Antigravity</strong> and <strong>Cursor</strong> has fundamental changed how I build apps.</p>
+                        
+                        <h3>The Shift in Workflow</h3>
+                        <p>I transitioned from traditional IDEs to these AI-first platforms to gain speed without compromising on quality. These tools don't just write code; they understand context. Whether it's refactoring a complex GetX controller or optimizing a Firebase transaction, the AI provides suggestions that are actually relevant to my specific project structure.</p>
+                        
+                        <blockquote>
+                            "AI doesn't replace the developer; it empowers the developer to focus on architecture and problem-solving rather than boilerplate."
+                        </blockquote>
+
+                        <h3>Key Benefits Experienced</h3>
+                        <ul>
+                            <li><strong>Rapid Prototyping:</strong> Building UI mockups from scratch is now 3x faster using generative UI commands.</li>
+                            <li><strong>Deep Debugging:</strong> Antigravity's ability to trace errors across multiple files helps me resolve edge-case crashes in minutes.</li>
+                            <li><strong>Code Optimization:</strong> Getting instant feedback on memory leaks or inefficient loops during the writing phase.</li>
+                        </ul>
+
+                        <p>By leveraging these tools, I've been able to maintain a high delivery pace for the 5+ production apps currently live on the stores, ensuring each one meets the highest performance standards.</p>
+                    </div>
+                </div>
+            `
         },
         {
-            title: 'Problem Solving at Developer Bazaar',
-            excerpt: 'Insights into the customer-centric approach at Developer Bazaar Technologies. Every challenge has a solution when the team is focused.',
-            image: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=800&auto=format&fit=crop', // Team meeting
-            link: 'https://www.linkedin.com/posts/developerbazaar_problemsolving-customercentric-developersbazaartechnologies-activity-7429114944408752128-7uoH',
-            tags: ['#ProblemSolving', '#Leadership']
+            id: 'flutter-responsive',
+            title: 'Mastering Flutter Responsive Design',
+            excerpt: 'Deep dive into building pixel-perfect, scalable UIs using Hero, LayoutBuilder, and custom responsive wrappers for Android and iOS.',
+            image: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=800&auto=format&fit=crop',
+            link: '#',
+            tags: ['#Flutter', '#UX'],
+            date: 'Jan 28, 2025',
+            content: `
+                <div class="blog-article">
+                    <header class="article-header">
+                        <span class="article-tag">Development Guide</span>
+                        <h1 class="article-title">Mastering Flutter Responsive Design</h1>
+                        <div class="article-meta">
+                            <span>Jan 28, 2025</span>
+                            <span>•</span>
+                            <span>8 min read</span>
+                        </div>
+                    </header>
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1517694712202-14dd9538aa97?q=80&w=1200&auto=format&fit=crop" alt="Flutter Coding">
+                    </div>
+                    <div class="article-content">
+                        <p>The "write once, run anywhere" promise of Flutter is powerful, but only if your UI adapts gracefully to thousands of different screen sizes. In this guide, I share my battle-tested approach to responsive design.</p>
+                        
+                        <h3>1. The Foundation: LayoutBuilder & BoxConstraints</h3>
+                        <p>Always avoid hardcoding sizes. <code>LayoutBuilder</code> is your best friend when you need to make decisions based on the parent widget's constraints rather than the whole screen. This is crucial for widgets that might appear in both full-screen and split-screen modes.</p>
+                        
+                        <pre><code>LayoutBuilder(
+  builder: (context, constraints) {
+    if (constraints.maxWidth > 600) {
+      return Row(
+        children: [
+          Expanded(child: Sidebar()),
+          Expanded(flex: 2, child: MainContent()),
+        ],
+      );
+    } else {
+      return Column(
+        children: [
+          MainContent(),
+          BottomNav(),
+        ],
+      );
+    }
+  },
+);</code></pre>
+
+                        <h3>2. Strategic Use of Hero Widgets</h3>
+                        <p>Continuity is key to a premium feel. I use <code>Hero</code> widgets to bridge the gap between small list items and detailed views. It's not just an animation; it's a visual anchor that helps users maintain their mental model of the app's hierarchy. In production apps, I often wrap common UI components like product images or profile avatars in Hero widgets to ensure smooth transitions between screens.</p>
+
+                        <h3>2. Logical Side of Scaling</h3>
+                        <p>Beyond layout switching, you need proportional scaling. I use a mathematical approach to scale fonts and spacing. Instead of static values, calculate them based on the screen width relative to your design draft.</p>
+                        
+                        <blockquote>
+                            <strong>Performance Tip:</strong> When building complex responsive UIs, use <code>RepaintBoundary</code> around heavy widgets to ensure that layout changes in one part of the screen don't trigger unnecessary repaints across the entire UI tree.
+                        </blockquote>
+
+                        <h3>Conclusion</h3>
+                        <p>Building for mobile means building for change. By combining these techniques with a solid understanding of <code>Flexible</code> and <code>Expanded</code>, we can deliver experiences that feel custom-built for every device our users hold.</p>
+                    </div>
+                </div>
+            `
         },
         {
-            title: 'Reflecting on 8 Months of Growth',
-            excerpt: 'Concluding an incredible journey at Developer Bazaar. From complex Flutter projects to leading a team, it’s been a foundation-strengthening experience.',
-            image: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=800&auto=format&fit=crop', // Analytics/growth visual
-            link: 'https://www.linkedin.com/in/trilok-shivhare-7825721aa/',
-            tags: ['#CareerGrowth', '#Milestone']
+            id: 'clean-arch',
+            title: 'Clean Architecture in Production Apps',
+            excerpt: 'Why MVVM and Clean Architecture are essential for long-term project stability. Lessons learned from 5+ live App Store deployments.',
+            image: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=800&auto=format&fit=crop',
+            link: '#',
+            tags: ['#Architecture', '#Scale'],
+            date: 'Dec 12, 2024',
+            content: `
+                <div class="blog-article">
+                    <header class="article-header">
+                        <span class="article-tag">Best Practices</span>
+                        <h1 class="article-title">Clean Architecture in Production Apps</h1>
+                        <div class="article-meta">
+                            <span>Dec 12, 2024</span>
+                            <span>•</span>
+                            <span>5 min read</span>
+                        </div>
+                    </header>
+                    <div class="article-image">
+                        <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=1200&auto=format&fit=crop" alt="Clean Code">
+                    </div>
+                    <div class="article-content">
+                        <p>Maintaining a codebase for 5+ production apps requires more than just knowing how to code—it requires a system. That system is <strong>Clean Architecture</strong> mixed with <strong>SOLID</strong> principles.</p>
+                        
+                        <h3>Why MVVM?</h3>
+                        <p>In Flutter, I strictly follow the Model-View-ViewModel pattern. This separation ensures that logic isn't tied to the UI. If I need to switch from Firebase to a local database, I only touch the Data Layer, leaving my UI and Business Logic layers intact.</p>
+                        
+                        <h3>Dependency Inversion (DI)</h3>
+                        <p>One of the biggest lessons learned is the power of <em>Inversion of Control</em>. By depending on abstractions (interfaces) rather than concrete implementations, I can easily swap out services or mock them for testing.</p>
+
+                        <pre><code>// Repository Interface (Domain Layer)
+abstract class UserRepository {
+  Future<User> getUser(String id);
+}
+
+// Concrete Implementation (Data Layer)
+class UserRemoteSource implements UserRepository {
+  @override
+  Future<User> getUser(String id) async {
+    // API call logic here
+  }
+}</code></pre>
+
+                        <h3>Layered Responsibilities</h3>
+                        <ul>
+                            <li><strong>Domain Layer:</strong> The heart of the app. Contains Entities, Use Cases, and Repository interfaces. Zero external dependencies.</li>
+                            <li><strong>Data Layer:</strong> The implementation detail. Repository implementations, Data Sources (API/DB), and Mappers.</li>
+                            <li><strong>Presentation Layer:</strong> The visual skin. Flutter Widgets and State Management (GetX/Riverpod/Bloc).</li>
+                        </ul>
+
+                        <p>This structure has been the backbone of projects like <strong>Ability Amore</strong>, ensuring that as the app grows, the cognitive load for developers remains manageable.</p>
+                    </div>
+                </div>
+            `
         }
     ];
 
-    const linkedinGrid = document.getElementById('linkedinGrid');
-    if (linkedinGrid) {
-        linkedinGrid.innerHTML = ''; // Clear placeholders
-        linkedinPosts.forEach((post, i) => {
-            const card = document.createElement('div');
-            card.className = 'linkedin-card reveal';
+    const blogGrid = document.getElementById('blogGrid');
+    const blogModal = document.getElementById('blogModal');
+    const blogModalContent = document.getElementById('blogModalContent');
+    const blogModalClose = document.getElementById('blogModalClose');
+    const blogModalOverlay = document.getElementById('blogModalOverlay');
+
+    function openBlog(id) {
+        const post = blogPosts.find(p => p.id === id);
+        if (post) {
+            blogModalContent.innerHTML = post.content;
+            blogModal.classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scroll
+        }
+    }
+
+    function closeBlog() {
+        blogModal.classList.remove('active');
+        document.body.style.overflow = ''; // Restore scroll
+        setTimeout(() => {
+            blogModalContent.innerHTML = '';
+        }, 400);
+    }
+
+    if (blogGrid) {
+        blogGrid.innerHTML = '';
+        blogPosts.forEach((post, i) => {
+            const card = document.createElement('article');
+            card.className = 'blog-card reveal';
             card.style.transitionDelay = (i * 0.1) + 's';
+            card.style.cursor = 'pointer';
 
             card.innerHTML = `
-                <div class="linkedin-card-image">
-                    <img src="${post.image}" alt="${post.title}" loading="lazy" onerror="this.src='https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=800&auto=format&fit=crop'">
+                <div class="blog-card-glow"></div>
+                <div class="blog-card-image">
+                    <img src="${post.image}" alt="${post.title}" loading="lazy">
+                    <div class="blog-date">${post.date}</div>
                 </div>
-                <div class="linkedin-card-header">
-                    <div class="linkedin-avatar">TS</div>
-                    <div class="linkedin-header-text">
-                        <h4>Trilok Shivhare</h4>
-                        <span>Mobile App Developer</span>
-                    </div>
-                </div>
-                <div class="linkedin-card-body">
-                    <h5>${post.title}</h5>
-                    <p>${post.excerpt}</p>
-                    <div class="linkedin-tags">${post.tags.map(tag => `<span>${tag}</span>`).join(' ')}</div>
-                </div>
-                <div class="linkedin-card-footer">
-                    <a href="${post.link}" target="_blank" class="linkedin-link">
-                        View on LinkedIn
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
-                    </a>
+                <div class="blog-card-body">
+                    <div class="blog-tags">${post.tags.map(tag => `<span>${tag}</span>`).join('')}</div>
+                    <h3 class="blog-title">${post.title}</h3>
+                    <p class="blog-excerpt">${post.excerpt}</p>
+                    <span class="blog-link">
+                        Read Insights
+                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </span>
                 </div>
             `;
-            linkedinGrid.appendChild(card);
+
+            card.addEventListener('click', () => openBlog(post.id));
+
+            blogGrid.appendChild(card);
             revealObserver.observe(card);
         });
     }
+
+    if (blogModalClose) blogModalClose.addEventListener('click', closeBlog);
+    if (blogModalOverlay) blogModalOverlay.addEventListener('click', closeBlog);
+
+    // Close on Escape key
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape' && blogModal && blogModal.classList.contains('active')) {
+            closeBlog();
+        }
+    });
 
 });

@@ -35,6 +35,7 @@
                 <li><a href="#skills" class="nav-link">Skills</a></li>
                 <li><a href="#experience" class="nav-link">Experience</a></li>
                 <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#blog" class="nav-link">Insights</a></li>
                 <li><a href="#achievements" class="nav-link">Achievements</a></li>
                 <li><a href="#contact" class="nav-link">Contact</a></li>
                 <li><a href="assets/pdf/resume_trilok.pdf" class="nav-cta" id="navResumeBtn" download>Resume</a></li>
@@ -572,27 +573,27 @@
         </div>
     </section>
 
-    <!-- ===== LINKEDIN POSTS SECTION ===== -->
-    <section class="section linkedin-section" id="linkedin">
+    <!-- ===== BLOG & INSIGHTS SECTION ===== -->
+    <section class="section blog-section" id="blog">
         <div class="container">
             <div class="section-header">
-                <span class="section-tag">Social Presence</span>
-                <h2 class="section-title">Latest <span class="gradient-text">LinkedIn</span> Posts</h2>
-                <p class="section-subtitle">Stay updated with my latest professional insights and project highlights</p>
+                <span class="section-tag">Learning & Growth</span>
+                <h2 class="section-title">AI & Dev <span class="gradient-text">Insights</span></h2>
+                <p class="section-subtitle">Sharing my journey and technical insights on mobile development and AI</p>
             </div>
-            <div class="linkedin-grid" id="linkedinGrid">
-                <!-- LinkedIn cards are dynamically rendered via script.js -->
-                <div class="loading-spinner">Loading latest posts...</div>
+            <div class="blog-grid" id="blogGrid">
+                <!-- Blog cards are dynamically rendered via script.js -->
+                <div class="loading-spinner">Loading latest insights...</div>
             </div>
-            <div class="linkedin-cta">
-                <a href="https://www.linkedin.com/in/trilok-shivhare-7825721aa/?originalSubdomain=in" target="_blank"
-                    class="btn btn-outline" id="linkedinFollowBtn">
+            <div class="blog-cta">
+                <a href="https://www.linkedin.com/in/trilok-shivhare-7825721aa/" target="_blank" class="btn btn-outline"
+                    id="blogLinkedInBtn">
                     <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
                         <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                         <rect x="2" y="9" width="4" height="12" />
                         <circle cx="4" cy="4" r="2" />
                     </svg>
-                    Follow me on LinkedIn
+                    More on LinkedIn
                 </a>
             </div>
         </div>
@@ -837,6 +838,22 @@
             </div>
         </div>
     </footer>
+
+    <!-- ===== BLOG MODAL ===== -->
+    <div class="blog-modal" id="blogModal">
+        <div class="blog-modal-overlay" id="blogModalOverlay"></div>
+        <div class="blog-modal-container">
+            <button class="blog-modal-close" id="blogModalClose" aria-label="Close Modal">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <line x1="18" y1="6" x2="6" y2="18"></line>
+                    <line x1="6" y1="6" x2="18" y2="18"></line>
+                </svg>
+            </button>
+            <div class="blog-modal-content" id="blogModalContent">
+                <!-- Content injected via JavaScript -->
+            </div>
+        </div>
+    </div>
 
     <script src="script.js"></script>
 </body>
